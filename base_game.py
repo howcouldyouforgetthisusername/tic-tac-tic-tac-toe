@@ -10,13 +10,46 @@ class SmallBoard:
 	"""
 	def __init__(self):
 		# Initially, each board is empty.
-		self.board = [['', '', ''], ['', '', ''], ['', '', '']]
+		self.board = [[' ', ' ', ' '], [' ', ' ', ' '], [' ', ' ', ' ']]
 
-	def is_occupied(row, col):
+	def is_occupied(self, row, col):
 		"""
 		Returns True if the given cell is occupied, False otherwise.
 		"""
-		return
+		return self.board[row][col] != ' '
+
+	def set_cell(self, row, col, val):
+		"""
+		Sets the cell indicated by row, col to be val.
+		"""
+		# TODO: Add exception handling.
+		self.board[row][col] = val
+
+	def full(self):
+		"""
+		Returns True if the board is full, False otherwise.
+		"""
+		for 
+
+	def find_winner(self):
+		"""
+		Searches for a winner. Returns either "X", "O", "Cat's Game", or "Not Filled"
+		"""
+		if not self.full():
+			return "Not Filled"
+
+	def __str__(self):
+		"""
+		ASCII art version of the board.
+		"""
+		return \
+			self.board[0][0] + '|' + self.board[0][1] + '|' + self.board[0][2] + '\n' + \
+			'-----\n' + \
+			self.board[1][0] + '|' + self.board[1][1] + '|' + self.board[1][2] + '\n' + \
+			'-----\n' + \
+			self.board[2][0] + '|' + self.board[2][1] + '|' + self.board[2][2] + '\n'
+
+
 
 class BigBoard:
 	"""
